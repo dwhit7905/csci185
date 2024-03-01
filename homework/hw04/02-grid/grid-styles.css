@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: pink;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+    
+
+    /* you will add addition rules for the container here  */
+}
+
+div {
+    background-color: white;
+    border: solid 3px black;
+}
+
+/* create your child rules here:  */
+.item-1 {
+    grid-column: 1 / span 3;
+    
+}
+
+.item-2 {
+    grid-column: 3 / span 3;
+}
+
+.item-3 {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+}
+
+.item-4 {
+    grid-column: 3 / span 3;
+}
+
+.item-5 {
+    grid-column: 1 / span 3;
+}

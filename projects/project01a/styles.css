@@ -1,0 +1,15 @@
+main, section, nav, footer {
+    border: solid 1px black;
+}
+
+section {
+    min-height: 200px;
+    margin: 7px;
+    border-radius: 15px;
+}
+
+main {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: grid;
+    
+}

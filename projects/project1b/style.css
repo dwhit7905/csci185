@@ -10,7 +10,6 @@
 }
 
 .the-columns>div {
-    /* border: solid 1px; */
     margin-bottom: 30px;
     border-radius: 5px;
     break-inside: avoid;
@@ -46,7 +45,7 @@ input:hover {
 
 header {
     display: grid;
-    grid-template-columns: 200px auto 200px;
+    grid-template-columns: 250px auto 120px;
     padding: 20px;
     margin-bottom: 30px;
     column-gap: 20px;
@@ -66,10 +65,28 @@ nav {
 }
 
 nav img {
-    width: 30px;
+    display: flex;
+    width: 25px;
+    align-items: center;
+}
+
+.left a,
+.left a:link,
+.left a:visited,
+.left a:hover,
+.left a:active {
+    color: black;
+    line-height: 2em;
+    text-decoration: none;
 }
 
 
+.selected {
+    background-color: black;
+    color: white !important;
+    border-radius: 20px;
+    padding: 5px 17px;
+}
 
 
 

@@ -25,7 +25,8 @@ function showImage() {
     //also target the caption text and change it to!
     const img= document.querySelector("#the_image");
     img.src = photos[idx];
-
+    const caption= document.querySelector(".caption");
+    caption.innerHTML = `Image ${idx + 1} of 10`;
 }
 
 
@@ -36,9 +37,15 @@ function showImage() {
    the array, set idx to 0.
 */
 function forward() {
-    idx += 1;
+    if (idx === 9) {
+        idx = 0;
+    }
+    else {
+        idx += 1;
+    }
     showImage();
     //if it gets to 9, set to 0
+
 }
 
 
@@ -49,7 +56,13 @@ function forward() {
    one less than the length of the array.
 */
 function back() {
-    idx -= -1;
+    
+    if (idx === 0) {
+        idx = 9;
+    }
+    else {
+        idx -= 1;
+    }
     showImage();
     //if it gets less than 0, set it to 9
 }

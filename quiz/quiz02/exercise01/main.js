@@ -1,6 +1,5 @@
 function changeBackground() {
     // your code here
-    console.log('Change the box\'s background color to blue');
     document.querySelector("#s1").style.backgroundColor = "lightblue";
 
 }

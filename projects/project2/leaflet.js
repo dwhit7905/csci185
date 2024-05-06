@@ -25,22 +25,39 @@ var marker17 = L.marker([52.51377, 13.37883]).addTo(map);
 var marker18 = L.marker([52.50180, 13.44576]).addTo(map);
 var marker19 = L.marker([52.50792, 13.37762]).addTo(map);
 var marker20 = L.marker([52.49636, 13.39609]).addTo(map);
+var marker21 = L.marker([52.518121, 13.391529]).addTo(map);
 
 
-52.50792/13.37762
-// var circle1 = L.circle([52.51050, 13.38166], {
-//     color: 'red',
-//     fillColor: '#f03',
-//     fillOpacity: 0.5,
-//     radius: 170
-// }).addTo(map);
+var circle1 = L.circle([52.497779, 13.411474], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 700
+}).addTo(map);
 
-// var circle1 = L.circle([52.51050, 13.38166], {
-//     color: 'red',
-//     fillColor: '#f03',
-//     fillOpacity: 0.5,
-//     radius: 170
-// }).addTo(map);
+var circle2 = L.circle([52.492606, 13.460655], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 700
+}).addTo(map);
+
+var circle3 = L.circle([52.517892, 13.404071], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 700
+}).addTo(map);
+
+var circle4 = L.circle([52.48116, 13.435271], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 700
+}).addTo(map);
+52.48116, 13.435271
+
+
 
 var polygon1 = L.polygon([
     [52.52348, 13.41242],
@@ -93,9 +110,20 @@ marker17.bindPopup("<b>Memorial to the Murdered Jews of Europe</b><br>Memorial")
 marker18.bindPopup("<b>Oberbaumbrücke</b><br>Oberbaum Bridge").openPopup();
 marker19.bindPopup("<b>Berlin Souvenirs x Kiosk</b><br>Souvenir Store").openPopup();
 marker20.bindPopup("<b>Heilig Kreuz-Kirche</b><br>Church").openPopup();
+marker21.bindPopup("<b>Staatsbibliotek zu Berlin</b><br>Library").openPopup();
 
-// circle1.bindPopup("Mall of Berlin");
 polygon1.bindPopup("Alexanderplatz");
 polygon2.bindPopup("Potsdamer Platz");
 polygon3.bindPopup("Mall of Berlin");
 polygon4.bindPopup("Tiergarten");
+
+var popup = L.popup();
+
+function onMapClick(e) {
+    popup
+        .setLatLng(e.latlng)
+        .setContent("You clicked the map at " + e.latlng.toString())
+        .openOn(map);
+}
+
+map.on('click', onMapClick);
